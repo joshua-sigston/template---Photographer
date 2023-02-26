@@ -255,7 +255,6 @@ section {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    /* background-color: lightblue; */
 }
 
 .cover_photo_one img {
@@ -264,9 +263,9 @@ section {
     object-fit: cover;
 }
 
-.cover_photo_two img {
+/* .cover_photo_two img {
     height: 80%;
-}
+} */
 
 /* portfolio */
 .portfolio {
@@ -527,6 +526,11 @@ section {
         left: 56em;
     }
 
+    .portfolio_grid-container:nth-child(4) {
+        position: absolute;
+        left: 85em;
+    }
+
     .img_container:nth-child(2) {
         grid-column: 2 / 4;
         height: 70%;
@@ -628,7 +632,6 @@ section {
         grid-row: 1 / 8;
         align-self: center;
         height: 450px;
-        background-color: lightblue;
     }
 }
 
