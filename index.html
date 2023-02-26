@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500&family=Josefin+Sans:wght@300;400;500&family=Yanone+Kaffeesatz:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- icon links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style link -->
+    <link rel="stylesheet" href="styles.css">
+    <title>PhotoFolio</title>
+</head>
+<body>
+<main>
+    <header class="flex_column">
+        <div class="hamburger flex_column" id="hamburger">
+            <div class="patty one"></div>
+            <div class="patty two"></div>
+            <div class="patty three"></div>
+        </div>
+
+        <nav class="mobile_nav flex_column" id="mobile-nav">
+            <div class="portfolio_link-cont">
+                <a href="#portfolio">Portfolio</a>
+            </div>
+            <div class="studio_link-cont">
+                <a href="#studio">Studio</a>
+            </div>
+            <div class="social_media flex_row">
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-sharp fa-regular fa-envelope"></i>
+            </div>
+        </nav>
+
+        <nav class="desktop_nav">
+            <div class="portfolio_link-cont">
+                <a href="#portfolio" class="portfolio_link">Portfolio</a>
+            </div>
+            <div class="studio_link-cont">
+                <a href="#studio" class="studio_link">Studio</a>
+            </div>
+            <div class="background"></div>
+        </nav>
+    </header>
+
+    <section class="home grid">
+        <div class="cover_photo_one">
+            <img src="images/cover-photo-one.jpg" alt="">
+        </div>
+        <picture class="cover_photo_two">
+            <source srcset="images/cover-photo-three.jpg" media="(min-width: 768px)">
+            <img src="images/cover-photo-two.jpg" alt="">
+        </picture>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h3 class="overview">Overview</h3>
+        <div class="type flex_row">
+            <p>Type</p>
+            <i class="fa-solid fa-chevron-right chevron" ></i>
+            <div class="choose_type flex_row inactive">
+                <p>dolor sit</p>
+                <p>amet consectetur</p>
+                <p>adipisicing elit</p>
+                <p>nulla voluptatibus</p>
+            </div>
+        </div>
+        <div class="portfolio_container flex_row">
+            <div class="portfolio_grid-container grid">
+                <div class="img_container hide">
+                    <img src="images/portfolio-img-one.jpg" alt="">
+                </div>
+                <div class="img_container hide">
+                    <img src="images/portfolio-img-two.jpg" alt="">
+                </div>
+                <div class="img_container hide">
+                    <img src="images/portfolio-img-three.jpg" alt="">
+                </div>
+                <div class="img_container hide">
+                    <img src="images/portfolio-img-four.jpg" alt="">
+                </div>
+            </div>
+            <div class="portfolio_grid-container grid">
+                <div class="img_container hide hide">
+                    <img src="images/portfolio-img-one.jpg" alt="">
+                </div>
+                <div class="img_container hide hide">
+                    <img src="images/portfolio-img-two.jpg" alt="">
+                </div>
+                <div class="img_container hide hide">
+                    <img src="images/portfolio-img-three.jpg" alt="">
+                </div>
+                <div class="img_container hide hide">
+                    <img src="images/portfolio-img-four.jpg" alt="">
+                </div>
+            </div>
+            <div class="portfolio_grid-container grid">
+                <div class="img_container hide">
+                    <img src="images/portfolio-img-one.jpg" alt="">
+                </div>
+                <div class="img_container hide">
+                    <img src="images/portfolio-img-two.jpg" alt="">
+                </div>
+                <div class="img_container hide">
+                    <img src="images/portfolio-img-three.jpg" alt="">
+                </div>
+                <div class="img_container hide">
+                    <img src="images/portfolio-img-four.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="studio flex_row" id="studio">
+        <div class="about flex_column">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque libero error soluta quam fugiat magnam facilis autem cumque nihil, dolorum voluptas sequi aliquid, cupiditate voluptates.</p>
+        </div>
+        <div class="contact flex_column">
+            <h2>Clients</h2>
+            <p>Lorem Ipsum, Amet Consectetur, & Atque libero.</p>
+        </div>
+        <div class="clients flex_column">
+            <h2>Contact</h2>
+            <p><span>Phone:</span>000-000-0001</p>
+            <p><span>Local:</span>345 lorem dolor, Facil SW 04968</p>
+        </div>
+    </section>
+</main>
+
+<script src="mobile_nav.js"></script>  
+<script src="type.js"></script>  
+<script src="portfolio.js"></script>
+</body>
+</html>
