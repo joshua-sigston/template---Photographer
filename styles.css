@@ -125,7 +125,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 img {
-    max-width: 100%;
+    max-width:100%;
 }
 
 a {
@@ -148,6 +148,7 @@ header {
 
     justify-content: space-evenly;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .hamburger:hover {
@@ -244,7 +245,6 @@ section {
     grid-column: 1 / 3;
     grid-row:  2/ 5;
     z-index: 2;
-    /* background-color: lightcoral; */
 }
 
 .cover_photo_two {
@@ -271,6 +271,15 @@ section {
 .portfolio {
     background-color: var(--clr-white-one);
     position: relative;
+}
+
+.type {
+    align-items: center;
+}
+
+.chevron,
+.choose_type {
+    margin-left: 1em;
 }
 
 .overview {
@@ -307,9 +316,8 @@ section {
 }
 
 .studio div {
-    flex: 1 1 10rem;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex: 1 1 15rem;
+    text-align: center;
 }
 
 
@@ -446,7 +454,6 @@ section {
         grid-row: 2 / 6;
         justify-self: center;
         width: 75%;
-        background-color: lightcoral;
         box-shadow: -10px 10px var(--clr-blck-two);
     }
 
@@ -459,7 +466,6 @@ section {
         grid-row: 2 / 6;
         align-self: center;
         height: 350px;
-        background-color: lightblue;
     }
 
     .cover_photo_two img {
@@ -499,10 +505,11 @@ section {
         overflow-x: scroll;
         position: relative;
         z-index: 1;
-        max-width: 90%;
-    }
+        height: 90%;
+        gap: 0;
 
-    .portfolio_container {
+        overflow-y: hidden ;
+
         background-image: url('images/Desktop\ -\ 4.png');
         background-size: 70% 20rem;
         background-position: center;
@@ -512,56 +519,30 @@ section {
 
     .portfolio_grid-container {
         min-width: 100%;
-        grid-template-columns: repeat(auto-fit, minmax(8rem, 10rem));
+        grid-template-columns: 1fr 1fr;
         grid-auto-rows: 250px;
+        place-content: center;
     }
 
-    .portfolio_grid-container:nth-child(2) {
-       position: absolute;
-       left: 28em;
+    .landscape {
+        align-self: center;
+        overflow: hidden;
+        height: 250px;
     }
 
-    .portfolio_grid-container:nth-child(3) {
-        position: absolute;
-        left: 56em;
-    }
-
-    .portfolio_grid-container:nth-child(4) {
-        position: absolute;
-        left: 85em;
-    }
-
-    .img_container:nth-child(2) {
-        grid-column: 2 / 4;
-        height: 70%;
-        
-        max-width: 75%;
-        align-self: flex-end;
-    }
-
-    .img_container:nth-child(3) {
-        grid-column: 1 / 3;
-        height: 70%;
-        
-        min-width: 80%;
-        grid-row: 2 / 3;
-        
-        justify-self: flex-end;
-    }
-
-    .img_container:nth-child(4){
+    .portriat {
         justify-self: center;
-        grid-column: 3 / 4;
-        grid-row: 2 / 3;
     }
 
     .img_container {
         transition: var(--transition);
+        background-color: lightblue;
     }
 
     .img_container:nth-child(even) {
        transition-delay: .4s;
     }
+
 
     .overview {
         display: flex;
@@ -613,25 +594,51 @@ section {
 
     .studio div {
         text-align: left;
-    
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 }
 
 @media screen and (min-width: 1024px){
     .cover_photo_one {
         grid-column: 1 / 3;
-        grid-row: 2 / 7;
-        justify-self: center;
+        grid-row: 1 / 7;
+        align-self: center;
         width: 75%;
-        background-color: lightcoral;
         box-shadow: -10px 10px var(--clr-blck-two);
     }
 
     .cover_photo_two {
         grid-column: 1 / 5;
-        grid-row: 1 / 8;
+        grid-row: 2 / 6;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .cover_photo_one {
+        grid-column: 1 / 3;
+        grid-row: 3 / 7;
         align-self: center;
-        height: 450px;
+        width: 75%;
+        box-shadow: -10px 10px var(--clr-blck-two);
+    }
+
+    .cover_photo_two {
+        grid-column: 1 / 5;
+        grid-row: 2 / 8;
+        min-height: 32rem;
+    }
+
+    .portfolio_grid-container {
+        min-width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 350px;
+        place-content: center;
+    }
+
+    .landscape {
+        align-self: center;
+        height: 15rem;
     }
 }
 
