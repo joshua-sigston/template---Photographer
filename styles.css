@@ -141,7 +141,8 @@ header {
 .hamburger {
     position: fixed;
     z-index: 10;
-    bottom: 1em;
+    top: 1em;
+    right: 1em;
     background-color: var(--clr-blck-one);
     height: 5rem;
     width: 5rem;
@@ -149,6 +150,11 @@ header {
     justify-content: space-evenly;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: var(--transition);
+}
+
+.hamburger_change {
+    background-color: var(--clr-white-three);
 }
 
 .hamburger:hover {
@@ -159,6 +165,11 @@ header {
     width: 3rem;
     height: .3rem;
     background-color: var(--clr-white-two);
+    transition: var(--transition-three);
+}
+
+.patty_change {
+    background-color: var(--clr-ascent-three);
 }
 
 .desktop_nav {
@@ -275,11 +286,21 @@ section {
 
 .type {
     align-items: center;
+    margin-bottom: 1em;
 }
 
 .chevron,
 .choose_type {
     margin-left: 1em;
+}
+
+.chevron {
+    cursor: pointer;
+}
+
+.choose_type {
+    flex: 1;
+    justify-content: space-between;
 }
 
 .overview {
@@ -524,6 +545,12 @@ section {
         place-content: center;
     }
 
+    .portfolio_container img {
+        height: 250px;
+        width: 200px;
+        object-fit: cover;
+    }
+
     .landscape {
         align-self: center;
         overflow: hidden;
@@ -534,25 +561,20 @@ section {
         justify-self: center;
     }
 
+    .landscape img {
+        height: 200px;
+    }
+
     .img_container {
         transition: var(--transition);
-        background-color: lightblue;
     }
 
     .img_container:nth-child(even) {
        transition-delay: .4s;
     }
 
-
     .overview {
         display: flex;
-    }
-
-    .type {
-        position: absolute;
-        bottom: 1em;
-        align-items: baseline;
-        width: 90%;
     }
 
     .type > p {
